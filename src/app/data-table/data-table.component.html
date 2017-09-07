@@ -1,0 +1,88 @@
+<p-contextMenu #cm [model]="menuItems"></p-contextMenu>
+<p-growl [(value)]="messages"></p-growl>
+
+<p-dataTable #dt [value]="employees" selectionMode="single" [(selection)]="selectedEmployee" 
+             [responsive]="true" [contextMenu]="cm" exportFilename="{{filename}}">
+    <p-header>
+        <div class="ui-helper-clearfix" style="width:100%">
+            <button pButton type="button" icon="fa-plus" style="float:left" 
+                    (click)="showDialogToAdd()" label="Add"></button>
+            <button pButton type="button" icon="fa-file-o" style="float:right" 
+                    (click)="dt.exportCSV()" label="CSV"></button>
+        </div>
+    </p-header>
+
+    <p-column field="id" header="ID">
+        <ng-template let-rowData="rowData" pTemplate="body">
+            <div [ngClass]="{greenBackground: rowData['tasksNumber']>=8 && rowData['tasksNumber']<=10,
+                             whiteBackground: rowData['tasksNumber']<8,
+                             redBackground: rowData['tasksNumber']>10}">{{rowData['id']}}</div>
+        </ng-template>
+    </p-column>
+
+    <p-column field="name" header="Name">
+        <ng-template let-rowData="rowData" pTemplate="body">
+            <div [ngClass]="{greenBackground: rowData['tasksNumber']>=8 && rowData['tasksNumber']<=10,
+                             whiteBackground: rowData['tasksNumber']<8,
+                             redBackground: rowData['tasksNumber']>10}">{{rowData['name']}}</div>
+        </ng-template>
+    </p-column>
+
+    <p-column field="surname" header="Surname">
+        <ng-template let-rowData="rowData" pTemplate="body">
+            <div [ngClass]="{greenBackground: rowData['tasksNumber']>=8 && rowData['tasksNumber']<=10,
+                             whiteBackground: rowData['tasksNumber']<8,
+                             redBackground: rowData['tasksNumber']>10}">{{rowData['surname']}}</div>
+        </ng-template>
+    </p-column>
+
+    <p-column field="position" header="Position">
+        <ng-template let-rowData="rowData" pTemplate="body">
+            <div [ngClass]="{greenBackground: rowData['tasksNumber']>=8 && rowData['tasksNumber']<=10,
+                             whiteBackground: rowData['tasksNumber']<8,
+                             redBackground: rowData['tasksNumber']>10}">{{rowData['position']}}</div>
+        </ng-template>
+    </p-column>
+    
+    <p-column field="tasksNumber" header="Tasks Count">
+        <ng-template let-rowData="rowData" pTemplate="body">
+            <div [ngClass]="{greenBackground: rowData['tasksNumber']>=8 && rowData['tasksNumber']<=10,
+                             whiteBackground: rowData['tasksNumber']<8,
+                             redBackground: rowData['tasksNumber']>10}">{{rowData['tasksNumber']}}</div>
+        </ng-template>
+    </p-column>
+</p-dataTable>
+
+<p-dialog header="Details" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" [modal]="true">
+    <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="employee">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="id">ID</label></div>
+            <div class="ui-grid-col-8">
+                <input type="number" pInputText id="id" [(ngModel)]="employee.id"/>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="name">Name</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="name" [(ngModel)]="employee.name"/></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="surname">Surname</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="surname" [(ngModel)]="employee.surname"/></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="position">Position</label></div>
+            <div class="ui-grid-col-8"><input pInputText id="position" [(ngModel)]="employee.position"/></div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-4"><label for="tasksNumber">Tasks Count</label></div>
+            <div class="ui-grid-col-8">
+                <input type="number" pInputText id="tasksNumber" [(ngModel)]="employee.tasksNumber"/>
+            </div>
+        </div>
+    </div>
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix">
+            <button type="button" pButton icon="fa-check" (click)="save()" label="Save"></button>
+        </div>
+    </p-footer>
+</p-dialog>

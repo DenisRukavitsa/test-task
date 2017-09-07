@@ -1,0 +1,14 @@
+{
+    "employees": [
+        {"id": 0, "name": "John", "surname": "Brown", "position": "frontend-developer", "tasksNumber": 6},
+        {"id": 1, "name": "Mark", "surname": "Wilson", "position": "business analyst", "tasksNumber": 11},
+        {"id": 2, "name": "Harry", "surname": "Robinson", "position": "backend-developer", "tasksNumber": 8},
+        {"id": 3, "name": "Marry", "surname": "Henderson", "position": "QA", "tasksNumber": 4},
+        {"id": 4, "name": "Jimmy", "surname": "Floyd", "position": "frontend-developer", "tasksNumber": 7},
+        {"id": 5, "name": "Kyle", "surname": "Miller", "position": "fullstack-developer", "tasksNumber": 10},
+        {"id": 6, "name": "Ben", "surname": "Smith", "position": "project manager", "tasksNumber": 17},
+        {"id": 7, "name": "Paul", "surname": "Anderson", "position": "backend-developer", "tasksNumber": 9},
+        {"id": 8, "name": "Max", "surname": "Watson", "position": "QA", "tasksNumber": 7},
+        {"id": 9, "name": "Frank", "surname": "Johnson", "position": "System architect", "tasksNumber": 10}
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "employees": [
+        {"id": 10, "name": "Bob", "surname": "Lincoln", "position": "project-manager", "tasksNumber": 9},
+        {"id": 11, "name": "Peter", "surname": "James", "position": "frontend-developer", "tasksNumber": 5},
+        {"id": 12, "name": "Andy", "surname": "Jackson", "position": "backend-developer", "tasksNumber": 8},
+        {"id": 13, "name": "Joe", "surname": "Mitchel", "position": "QA", "tasksNumber": 10},
+        {"id": 14, "name": "Victoria", "surname": "Mitchel", "position": "frontend-developer", "tasksNumber": 6}
+    ]
+}

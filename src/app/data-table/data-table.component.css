@@ -1,0 +1,17 @@
+.greenBackground {
+    background-color: lightgreen;
+    margin: -5px -8px;
+    padding: 5px 8px;
+}
+
+.redBackground {
+    background-color: #ff9999;
+    margin: -5px -8px;
+    padding: 5px 8px;
+}
+
+.whiteBackground {
+    background-color: white;
+    margin: -5px -8px;
+    padding: 5px 8px;
+}

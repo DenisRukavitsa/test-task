@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+.ui-tabview .ui-tabview-panel {
+    padding: 0em;
+}
+
+tr.ui-state-highlight {
+    color: black !important;
+}
+
+.ui-grid-row {
+    margin: 0.5em;
+}
+
+.ui-grid-col-4 {
+    margin-right: 0.5em;
+}
