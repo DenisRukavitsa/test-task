@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-.ui-tabview .ui-tabview-panel {
+div.ui-tabview div.ui-tabview-panel {
     padding: 0em;
 }
 
@@ -14,4 +14,8 @@ tr.ui-state-highlight {
 
 .ui-grid-col-4 {
     margin-right: 0.5em;
+}
+
+ul.ui-widget-header {
+    border: 0px;
 }
